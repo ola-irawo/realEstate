@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import styles from "./property-details-hero.module.css"
 import Image from 'next/image';
 interface PropertyProps {
@@ -30,15 +30,24 @@ const PropertyDetailsHero = ({property}: Props) => {
 
     const images = property?.images || [];
 
-    const handleNext = () => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    };
+    // const handleNext = () => {
+    //   setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    // };
   
-    const handlePrev = () => {
-      setCurrentImageIndex(
-        (prevIndex) => (prevIndex - 1 + images.length) % images.length
-      );
-    };
+    // const handlePrev = () => {
+    //   setCurrentImageIndex(
+    //     (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    //   );
+    // };
+
+    const handleNext = useCallback(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, [images.length]); // Dependency is images.length
+  
+    // Memoize handlePrev using useCallback
+    const handlePrev = useCallback(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+    }, [images.length]);
 
     const handleTouchStart = (e: React.TouchEvent) => {
       setTouchStart(e.targetTouches[0].clientX);

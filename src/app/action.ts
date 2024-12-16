@@ -21,7 +21,7 @@ export const getFilteredPropertyType = async ({
     filterItem,
     propertyType,
   }: {
-    filterItem: Record<string, string>;
+    filterItem: Record<string, string | number>;
     propertyType: string;
   }) => {
     try {
