@@ -42,7 +42,7 @@ const Header= () => {
         <Image
           className={styles.logo}
           src={"/aremudami.png"}
-          alt="Aremu Dami brand logo"
+          alt="Aremu Dami Real Estate Logo"
           width={windowWidth <= 1300 ? 120 : 180}
           height={windowWidth <= 1300 ? 60 : 80}
           priority
@@ -51,6 +51,8 @@ const Header= () => {
         {isMobile && (
         <button 
           aria-label={!showNav ? "Show navigation bar" : "Close navigation bar"}  
+          aria-expanded={showNav}
+          aria-controls="main-navigation"
           onClick={() => setShowNav(prev => !prev)}
         >
           <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="30" height="20" viewBox="0 0 448 512">
@@ -67,7 +69,7 @@ const Header= () => {
       </div>
 
       {(!isMobile || showNav) && (
-        <nav className={styles.navContainer}>
+        <nav className={styles.navContainer} id="main-navigation">
           <ul className={styles.navList}>
             {landingPageSections.map((item, index) => (
                  <li key={index} className={styles.navItem}>
