@@ -27,6 +27,7 @@
 .serviceItem {
   position: relative;
   width: calc(50% - 1rem);
+  min-width: 90%;
   max-width: 48rem;
   height: clamp(20rem, 20vw, 30rem);
   background-size: cover;
@@ -79,4 +80,10 @@
 .serviceItem:hover .serviceDescription {
   opacity: 1;
   visibility: visible;
+}
+
+@media (min-width: 768px) {
+  .serviceItem {
+    min-width: unset;
+  }
 }

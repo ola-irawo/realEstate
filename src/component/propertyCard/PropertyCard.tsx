@@ -26,8 +26,7 @@ const PropertyCard = ({
   features,
   id
 }: PropertyProps) => {
-    const [openBookInspection, setOpenBookInspection] = useState<boolean>(false)
-
+  const [openBookInspection, setOpenBookInspection] = useState<boolean>(false)
 
   return (
     <article className={styles.card}>
@@ -36,7 +35,7 @@ const PropertyCard = ({
         title={title}
         type={type}
         propertyLink={`property-details/${id}/${type}`}
-        setOpenBookInspection={() => setOpenBookInspection} 
+        setOpenBookInspection={setOpenBookInspection} 
       />
     )}
         
@@ -57,13 +56,13 @@ const PropertyCard = ({
             <p className={styles.location}>
             {location.city}, {location.state}, {location.country}
             </p>
-            <ul className={styles.features}>
+            {/* <ul className={styles.features}>
             {features.map((feature, index) => (
                 <li key={index} className={styles.feature}>
                 {feature}
                 </li>
             ))}
-            </ul>
+            </ul> */}
             <p className={styles.price}>${price.toLocaleString()}</p>
         </div>
 

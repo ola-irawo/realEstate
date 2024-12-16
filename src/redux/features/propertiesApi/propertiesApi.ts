@@ -1,7 +1,5 @@
 import { getFilteredPropertyType, getPropertyById } from "@/app/action";
-import { db } from "@/config/firebase/firebase";
 import { createApi, fakeBaseQuery, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { collection } from "firebase/firestore";
 
 const propertiesApi = createApi({
     reducerPath: "propertiesApi",

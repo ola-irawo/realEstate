@@ -9,50 +9,30 @@
   background-repeat: no-repeat;
   padding: 2rem;
   text-align: center;
-  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
 }
 
 .heroContent {
-  max-width: 1200px;
+  max-width: 120rem;
   width: 100%;
-  background: rgba(
-    0,
-    0,
-    0,
-    0.5
-  ); /* Semi-transparent background for readability */
+  background: rgba(0, 0, 0, 0.5);
   padding: 3rem;
-  border-radius: 8px;
+  border-radius: 0.8rem;
 }
 
 .title {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: clamp(2.6rem, 2.6vw, 5rem);
   font-weight: 700;
+  line-height: clamp(4.5rem, 4.5vw, 8.8rem);
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+  color: #fff;
 }
 
 /* Make it responsive */
 @media (max-width: 768px) {
-  .hero {
-    height: 50vh; /* Adjust height for smaller screens */
-    padding: 1rem;
-  }
-
   .heroContent {
     padding: 1.5rem;
-  }
-
-  .title {
-    font-size: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .title {
-    font-size: 1.2rem;
-  }
-
-  .hero {
-    height: 40vh; /* Further adjust height for mobile */
   }
 }

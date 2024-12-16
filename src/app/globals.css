@@ -125,4 +125,5 @@ code {
 
 body {
   max-width: 144rem;
+  overflow-x: hidden;
 }

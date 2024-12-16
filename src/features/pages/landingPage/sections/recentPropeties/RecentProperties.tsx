@@ -4,6 +4,8 @@ import styles from "./recent-properties.module.css";
 import PropertyCard from "@/component/propertyCard/PropertyCard";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "@/config/firebase/firebase";
+import { useFilteredPropertyQuery } from "@/redux/features/propertiesApi/propertiesApi";
+import Loader from "@/component/loader/Loader";
 
 interface Property {
     id: string;
@@ -22,26 +24,23 @@ interface Property {
   }
 
 const RecentProperties = () => {
-  const [p, setP] = useState<Property[]>([]);
+  const type = ["sale", "rent", "shortlet"]
+  const randomType = type[Math.floor(Math.random() * type.length)];
 
-  const propertiesQuery = async () => {
-    const querySnapshot = await getDocs(collection(db, "sale"));
-    const properties = querySnapshot.docs.map((doc) => ({
-      id: doc.id,
-      ...doc.data(),
-    }));
-    setP(properties);
-  };
+  const {
+    data: properties = [],
+    isLoading,
+  } = useFilteredPropertyQuery({propertyFilters: {type: "sale"}, propertyType: "sale"})
 
-  useEffect(() => {
-    propertiesQuery();
-  }, []); // Run only on component mount
-
+  if(isLoading){
+    return <Loader />
+  }
+  
   return (
     <section className={styles.section}>
       <h2 className={styles.title}>Recent Properties</h2>
       <ul className={styles.propertiesGrid}>
-        {p.slice(0, 4).map((property) => {
+        {properties.slice(0, 4).map((property) => {
             return <li>
                 <PropertyCard
                     key={property.id}

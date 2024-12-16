@@ -70,6 +70,7 @@ const BookInspection: React.FC<BookInspectionProps> = ({ propertyLink, setOpenBo
               placeholder="Add any additional information..."
             />
           </label>
+          
           <button type="submit" className={styles.submitButton}>
             Submit
           </button>

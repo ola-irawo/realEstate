@@ -4,6 +4,7 @@ import PropertyDetailsHero from '../sections/propertyDetailsHero/PropertyDetails
 import { useGetPropertyByIdQuery } from '@/redux/features/propertiesApi/propertiesApi'
 import { useParams } from 'next/navigation';
 import PropertyDetails from '../sections/propertyDetails/PropertyDetails';
+import Loader from '@/component/loader/Loader';
 
 interface PropertyProps {
   images: string[];
@@ -23,22 +24,23 @@ interface PropertyProps {
 
 
 const PropertyDetailsLayout = () => {
-    const {id, propertyType} = useParams()
+  const {id, propertyType} = useParams()
 
-    const {
-        data: property = {} as PropertyProps,
-        isFetching,
-        isLoading
-    } = useGetPropertyByIdQuery({id, propertyType})
+  const {
+    data: property,
+    isLoading
+  } = useGetPropertyByIdQuery({id, propertyType})
 
-    if(isLoading){
-      return "Loading"
-    } 
+  if(isLoading){
+    return <Loader />
+  }  
+  
+  const propertyData = property as PropertyProps;
 
   return (
     <div>
-      <PropertyDetailsHero property={property} />
-      <PropertyDetails property={property} />
+      <PropertyDetailsHero property={propertyData} />
+      <PropertyDetails property={propertyData} />
     </div>
   )
 }

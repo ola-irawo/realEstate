@@ -17,12 +17,15 @@ interface Property {
   // Define the props for the PropertyListing component
   interface PropertyListingProps {
     properties: Property[];
+    type: string
   }
 
-const PropertyListing = ({properties}: PropertyListingProps) => {
+const PropertyListing = ({properties, type}: PropertyListingProps) => {
 
   return (
     <section className={styles.propertyListingSection}>
+      <h2 className={styles.propertyListingTitle}>For {type}</h2>
+
       <ul className={styles.propertyList}>
         {properties.map((property, index) => {
             return <li key={index} className={styles.propertyItem}>

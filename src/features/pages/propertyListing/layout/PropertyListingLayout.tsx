@@ -4,6 +4,7 @@ import PropertyListingHero from '../sections/propertyListingHero/PropertyListing
 import PropertyListing from '../sections/propertyListing/PropertyListing'
 import { useFilteredPropertyQuery } from '@/redux/features/propertiesApi/propertiesApi'
 import { useSearchParams } from 'next/navigation'
+import Loader from '@/component/loader/Loader'
 
 const PropertyListingLayout = () => {
     const searchParams = useSearchParams()
@@ -23,25 +24,23 @@ const PropertyListingLayout = () => {
             ...prevFilters,
             [name]: value,
         }));
-        console.log(`Filter Updated: ${name} = ${value}`);
-        console.log(propertyFilters)
     };
 
     const {
-        data: properties = [],
-        isError,
-        isLoading,
-        isFetching
+      data: properties = [],
+      isError,
+      isLoading,
+      isFetching
     } = useFilteredPropertyQuery({propertyFilters, propertyType: propertyFilters.type})
-    
-    useEffect(() => {
-        console.log(properties)
-    }, [isFetching, isLoading, propertyFilters])
 
+    if(isLoading){
+      return <Loader />
+    }
+    
   return (
     <>
       <PropertyListingHero propertyFilters={propertyFilters} handleFilterChange={handleFilterChange} />
-      <PropertyListing properties={properties} />
+      <PropertyListing properties={properties} type={propertyFilters.type} />
     </>
   )
 }

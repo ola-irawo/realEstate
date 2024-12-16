@@ -29,50 +29,50 @@ const LandingPageHero = () => {
 
   return (
     <section className={styles.heroSection}>
-        <article className={styles.container}>
+      <article className={styles.container}>
 
         <div
-            className={styles.imageBackground}
-            style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
+          className={styles.imageBackground}
+          style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
         ></div>
 
         <div className={styles.contentWrapper}>
-            <header className={styles.header}>
-                <h1 className={styles.heroTitle}>Discover the perfect property that matches your lifestyle and needs.</h1>
-                <p className={styles.heroSubtitle}>Explore the best properties.</p>
-            </header>
+          <header className={styles.header}>
+            <h1 className={styles.heroTitle}>Discover the perfect property that matches your lifestyle and needs.</h1>
+            <p className={styles.heroSubtitle}>Explore the best properties.</p>
+          </header>
 
-            {
-                isTab 
-                &&
-                <Image
-                    src={"/realtor.png"}
-                    alt="Realtor advertising house"
-                    width={windowWidth > 1000 ? 500 : 400}
-                    height={windowWidth > 1000 ? 400 : 300}
-                    className={styles.realtor}
-                />
-            }
-            
-            <div className={styles.heroLinkContainer}>
-                <Link href="listing"  className={styles.searchButton}>View listing</Link>
-                <Link href="contact" className={styles.searchButton}>Contact</Link>
-            </div>
-        </div>
+          {
+            isTab 
+            &&
+            <Image
+              src={"/realtor.png"}
+              alt="Realtor advertising house"
+              width={windowWidth > 1000 ? 500 : 400}
+              height={windowWidth > 1000 ? 400 : 300}
+              className={styles.realtor}
+            />
+          }
+          
+          <div className={styles.heroLinkContainer}>
+            <Link href="listing"  className={styles.linkButton}>View listing</Link>
+            <Link href="contact" className={styles.linkButton}>Contact</Link>
+          </div>
+      </div>
       </article>
 
       <aside className={styles.offsetButtons}>
-          {images.map((_, index) => (
-            <button
-              key={index}
-              className={`${styles.heroButton} ${
-                currentImageIndex === index ? styles.activeButton : ""
-              }`}
-              onClick={() => setCurrentImageIndex(index)}
-            >
-            </button>
-          ))}
-        </aside>
+        {images.map((_, index) => (
+          <button
+            key={index}
+            className={`${styles.heroButton} ${
+              currentImageIndex === index ? styles.activeButton : ""
+            }`}
+            onClick={() => setCurrentImageIndex(index)}
+          >
+          </button>
+        ))}
+      </aside>
     </section>
   );
 };

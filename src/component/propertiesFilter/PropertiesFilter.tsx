@@ -22,7 +22,6 @@ const PropertiesFilter = ({ propertyFilters, handleFilterChange }: PropertiesFil
       <h2 className={styles.title}>Filter Properties</h2>
       <div className={styles.form}>
         <label>
-          Type:
           <select
             name="type"
             value={propertyFilters.type}
@@ -37,7 +36,6 @@ const PropertiesFilter = ({ propertyFilters, handleFilterChange }: PropertiesFil
         </label>
 
         <label>
-            Price:
             <select
                 name="price"
                 value={propertyFilters.price}
@@ -75,7 +73,6 @@ const PropertiesFilter = ({ propertyFilters, handleFilterChange }: PropertiesFil
         </label>
 
         <label>
-          Location:
           <select
             name="location"
             value={propertyFilters.location}
@@ -89,7 +86,6 @@ const PropertiesFilter = ({ propertyFilters, handleFilterChange }: PropertiesFil
           </select>
         </label>
         <label>
-          Bathrooms:
           <select
             name="bathrooms"
             value={propertyFilters.bathrooms}
@@ -105,7 +101,6 @@ const PropertiesFilter = ({ propertyFilters, handleFilterChange }: PropertiesFil
           </select>
         </label>
         <label>
-          Bedrooms:
           <select
             name="bedrooms"
             value={propertyFilters.bedrooms}
