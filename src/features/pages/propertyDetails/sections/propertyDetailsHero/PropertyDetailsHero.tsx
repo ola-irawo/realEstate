@@ -63,7 +63,7 @@ const PropertyDetailsHero = ({property}: Props) => {
       }, 5000); // Change image every 5 seconds
   
       return () => clearInterval(interval); // Cleanup on component unmount
-    }, [currentImageIndex]); // Depend on the currentImageIndex to reset interval
+    }, [currentImageIndex, handleNext]); // Depend on the currentImageIndex to reset interval
   
   return (
     <section>
