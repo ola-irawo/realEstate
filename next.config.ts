@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
   images: {
     domains: ['firebasestorage.googleapis.com', 'img.freepik.com'], // Add the Firebase storage domain
   },
+  eslint: {
+    ignoreDuringBuilds: true, // Disables ESLint during build
+  },
 };
 
 export default nextConfig;

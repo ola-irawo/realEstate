@@ -1,11 +1,5 @@
-import React from 'react'
-
-const page = () => {
-  return (
-    <div>
-      <h1>Not found page</h1>
-    </div>
-  )
-}
-
-export default page
+// app/not-found/page.tsx
+export default function NotFound() {
+    return <h1>Page Not Found</h1>;
+  }
+  
