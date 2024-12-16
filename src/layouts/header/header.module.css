@@ -1,0 +1,140 @@
+.header {
+  border-bottom: 0.1rem solid #000;
+  padding-left: 2.2rem;
+  padding-right: 0.9rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: #fff;
+  padding-top: 1.4rem;
+  padding-bottom: 1.7rem;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navContainer {
+  min-width: 28rem;
+  height: 33rem;
+  margin-bottom: 4rem;
+  padding: 0 2.8rem;
+  margin-top: 2rem;
+}
+
+.navList {
+  display: grid;
+  gap: 1rem;
+}
+
+.navItem {
+  height: 5.2rem;
+  border-radius: 0.5rem;
+  border: 0.1rem solid #0000000d;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+}
+
+.navItem a {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 3rem;
+  letter-spacing: -2%;
+  color: #242124;
+  padding-left: 2.4rem;
+}
+
+.navItem:hover {
+  background-color: rgb(0, 0, 0, 0.8);
+  color: #fff;
+}
+.navItem:hover a {
+  color: #fff;
+}
+
+.navItem:last-of-type {
+  border: 0.1rem solid #000;
+}
+
+@media (min-width: 1000px) {
+  .header {
+    display: flex;
+    align-items: center;
+    height: 10.6rem;
+  }
+
+  .logoContainer {
+    margin-left: 1rem;
+  }
+
+  .navContainer {
+    all: unset;
+    flex: 1;
+  }
+
+  .navList {
+    all: unset;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .navItem {
+    all: unset;
+  }
+
+  .navItem:hover {
+    background-color: unset;
+    color: unset;
+  }
+  .navItem:hover a {
+    color: unset;
+  }
+
+  .navItem a {
+    padding-left: unset;
+    line-height: unset;
+    letter-spacing: unset;
+    text-align: center;
+    color: #000000;
+    font-size: clamp(1.6rem, 1.6vw, 2rem);
+    font-weight: 400;
+    line-height: 3rem;
+  }
+
+  .navItem:not(:last-of-type) a:hover {
+    color: #4196e3;
+    font-weight: 500;
+    text-decoration: underline;
+  }
+
+  .navItem:first-of-type {
+    margin-left: auto;
+  }
+
+  .navItem:last-of-type {
+    all: unset;
+    margin-left: auto;
+    margin-right: clamp(3rem, 3vw, 12.5rem);
+    display: grid;
+    align-items: center;
+  }
+
+  .navItem:last-of-type a {
+    font-weight: 500;
+    border-radius: 0.2rem;
+    background-color: rgb(0, 0, 0, 1);
+    color: #fff;
+    padding: 1rem 2rem;
+    transition: background-color, transform,
+      0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  }
+
+  .navItem:last-of-type a:hover {
+    background-color: rgb(0, 0, 0, 0.8);
+    transform: scale(1.03);
+  }
+}

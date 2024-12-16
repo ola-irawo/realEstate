@@ -1,0 +1,77 @@
+.propertiesOptionSection {
+  padding: 6rem 2rem;
+}
+
+.container {
+  display: grid;
+  gap: 2rem;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  height: 15rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.cardContent {
+  flex: 1;
+  padding: 1rem 2rem;
+}
+
+.cardTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.cardDescription {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.cardLink {
+  font-size: 1rem;
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.cardLink:hover {
+  text-decoration: underline;
+}
+
+.cardImageWrapper {
+  flex-shrink: 0;
+  height: 100%;
+  width: 15rem;
+  overflow: hidden;
+}
+
+.cardImage {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 900px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

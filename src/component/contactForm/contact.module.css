@@ -1,0 +1,88 @@
+/* General Section Style */
+.contactSection {
+  padding: 3rem;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.title {
+  font-size: clamp(2.6rem, 2.6vw, 5rem);
+  font-weight: 700;
+  line-height: clamp(4.5rem, 4.5vw, 8.8rem);
+  letter-spacing: -0.02em;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+/* Contact Form Style */
+.contactForm {
+  display: grid;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 90rem;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.label {
+  font-size: clamp(1.2rem, 1.2vw, 1.8rem);
+  font-weight: 500;
+  line-height: clamp(2.4rem, 2.4vw, 3rem);
+  letter-spacing: -0.30000001192092896px;
+  margin-bottom: 0.5rem;
+  color: #555;
+  text-align: left;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: clamp(1.6rem, 1.6vw, 2rem);
+  font-weight: 400;
+  line-height: clamp(2.4rem, 2.4vw, 3rem);
+  letter-spacing: -0.30000001192092896px;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+.textarea {
+  min-height: 12rem;
+}
+
+.submitButton {
+  padding: 1rem;
+  background-color: #3498db;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: clamp(1.6rem, 1.6vw, 2.2rem);
+  font-weight: 400;
+  line-height: clamp(2.4rem, 2.4vw, 3rem);
+  letter-spacing: -0.30000001192092896px;
+  cursor: pointer;
+}
+
+.submitButton:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contactForm {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
+}

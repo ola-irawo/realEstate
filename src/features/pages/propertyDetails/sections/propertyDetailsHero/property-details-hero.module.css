@@ -1,0 +1,91 @@
+.propertyDetailsContainer {
+  background-color: #f9f9f9;
+}
+
+.showcaseImage {
+  position: relative;
+  width: 100%;
+  max-width: 90rem;
+}
+
+.propertyImage {
+  width: 100%;
+  min-height: 40rem;
+  object-fit: cover;
+}
+
+.imgList {
+  display: none;
+}
+
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 1rem;
+  cursor: pointer;
+  width: 4rem;
+  height: 4rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color, 0.3s ease-in-out;
+}
+
+.navButton:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.prevButton {
+  left: 10px;
+}
+
+.nextButton {
+  right: 10px;
+}
+
+@media (min-width: 900px) {
+  .propertyDetailsContainer {
+    padding: 2rem;
+  }
+
+  .imageGallery {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 0.6fr;
+  }
+
+  .propertyImage {
+    min-height: 47rem;
+    border-radius: 0.1rem;
+  }
+
+  .imgList {
+    display: block;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    max-height: 6rem;
+  }
+
+  .sideImg {
+    border-radius: 0.2rem;
+    width: clamp(10rem, 10vw, 20rem);
+    height: clamp(10rem, 10vw, 20rem);
+    opacity: 0.6;
+    transition: opacity, 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    cursor: pointer;
+  }
+
+  .sideImg:hover {
+    opacity: 1;
+  }
+
+  .removeOpcaity {
+    opacity: 1;
+  }
+}

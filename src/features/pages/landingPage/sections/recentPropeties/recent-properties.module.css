@@ -1,0 +1,39 @@
+/* Recent Properties Section */
+.section {
+  padding: 2rem 1rem;
+  background-color: #f9f9f9;
+}
+
+.title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #333;
+}
+
+.propertiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  gap: 2rem;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Add responsiveness */
+@media (min-width: 768px) {
+  .title {
+    font-size: 3rem;
+  }
+
+  /* .propertiesGrid {
+    grid-template-columns: 1fr 1fr;
+  } */
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: 3rem;
+  }
+}

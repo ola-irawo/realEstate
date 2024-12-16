@@ -1,0 +1,120 @@
+/* General Section Styles */
+.section {
+  padding: 40px 20px;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.article {
+  max-width: 1200px;
+  width: 100%;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  font-size: clamp(2.6rem, 2.6vw, 5rem);
+  font-weight: 700;
+  line-height: clamp(4.5rem, 4.5vw, 8.8rem);
+  letter-spacing: -0.02em;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Testimonial List Styles */
+.testimonialList {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.testimonialItem {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: clamp(14rem, 14vw, 16rem);
+}
+
+.testimonialItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.feedback {
+  color: #000;
+  font-style: italic;
+  margin-bottom: 15px;
+  font-size: clamp(1.2rem, 1.2vw, 1.6rem);
+  font-weight: 500;
+  line-height: clamp(2.4rem, 2.4vw, 3rem);
+  letter-spacing: -0.30000001192092896px;
+}
+
+.name {
+  font-size: clamp(1.6rem, 1.6vw, 2.2rem);
+  font-weight: 600;
+  line-height: clamp(2.4rem, 2.4vw, 3rem);
+  letter-spacing: -0.30000001192092896px;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .testimonialList {
+    grid-template-columns: 1fr;
+  }
+
+  .heading {
+    font-size: 2rem;
+  }
+
+  .testimonialItem {
+    padding: 15px;
+  }
+
+  .feedback {
+    font-size: 1.1rem;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 30px 15px;
+  }
+
+  .article {
+    padding: 20px;
+  }
+
+  .heading {
+    font-size: 1.8rem;
+  }
+
+  .testimonialItem {
+    padding: 10px;
+  }
+
+  .feedback {
+    font-size: 1rem;
+  }
+
+  .name {
+    font-size: 0.9rem;
+  }
+}

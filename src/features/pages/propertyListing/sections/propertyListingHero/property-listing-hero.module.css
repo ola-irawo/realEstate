@@ -1,0 +1,58 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40rem;
+  background-image: url("https://img.freepik.com/free-photo/selective-focus-design-architecture_273609-5607.jpg?uid=R174724058&ga=GA1.1.1991276647.1688005309&semt=ais_hybrid");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem;
+  text-align: center;
+  color: white;
+}
+
+.heroContent {
+  max-width: 1200px;
+  width: 100%;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Semi-transparent background for readability */
+  padding: 3rem;
+  border-radius: 8px;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+/* Make it responsive */
+@media (max-width: 768px) {
+  .hero {
+    height: 50vh; /* Adjust height for smaller screens */
+    padding: 1rem;
+  }
+
+  .heroContent {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .hero {
+    height: 40vh; /* Further adjust height for mobile */
+  }
+}

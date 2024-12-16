@@ -1,0 +1,26 @@
+.propertyListingSection {
+  padding: 2rem 1rem;
+  background-color: #f9f9f9;
+}
+
+.propertyList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  gap: 2rem;
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.propertyItem {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.propertyItem:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}

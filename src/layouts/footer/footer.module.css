@@ -1,0 +1,150 @@
+.landingPageFooter {
+  background: #02050d;
+  width: clamp(28rem, 100%, 144rem);
+  color: var(--primary-white-color);
+  border: 0.1rem solid #02050d;
+  position: relative;
+  color: #fff !important;
+}
+
+.landingPageFooter a,
+.landingPageFooter h2 {
+  color: #fff;
+}
+.footerWrapper {
+  display: grid;
+  gap: 1rem;
+  width: clamp(20rem, 86%, 110.2rem);
+  margin: 0 auto;
+  margin-top: 3.1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.footerNav {
+  display: flex;
+  justify-content: space-between;
+  grid-template-columns: 1fr 1fr;
+}
+
+.footerNavList,
+.footerPolicyList {
+  display: grid;
+  gap: 2rem;
+}
+
+.footerNavList {
+  height: clamp(15.4rem, 15.4vw, 24.9rem);
+}
+
+.footerPolicyList {
+  max-height: clamp(8.8rem, 8.8vw, 14.5rem);
+}
+
+.footer {
+  font-size: clamp(1.8rem, 1.8vw, 3.4rem);
+  font-weight: 500;
+  line-height: clamp(2.194rem, 2.194vw, 4.145rem);
+}
+
+.footerNavItem a,
+.footerPolicyItem a {
+  color: inherit;
+  font-size: clamp(1.4rem, 1.4vw, 2.4rem);
+  font-weight: var(--ex-small-fw);
+  line-height: clamp(1.707rem, 1.707vw, 2.926rem);
+}
+
+.footerWaitlist {
+  margin-top: 3.5rem;
+  width: clamp(26.2rem, 26.2vw, 48.3rem);
+}
+
+.footerWaitlistTitle {
+  font-size: clamp(1.6rem, 1.6vw, 5rem);
+  font-weight: clamp(500, 500, 600);
+  line-height: clamp(1.95rem, 1.95vw, 3.657rem);
+}
+
+.footerWaitlistText {
+  font-size: clamp(1.2rem, 1.2vw, 3rem);
+  font-weight: clamp(300, 300, 400);
+  line-height: clamp(1.436rem, 1.436vw, 3.657rem);
+  margin-top: 1rem;
+}
+
+.footerWaitlistLinkContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+}
+
+.footerWaitlistLink {
+  color: #fff;
+  border-radius: 1rem;
+  height: clamp(4rem, 4vw, 7.2rem);
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  font-size: clamp(1.2rem, 1.2vw, 2.2rem);
+  font-weight: clamp(500, 500, 600);
+  line-height: clamp(1.463rem, 1.463vw, 2.682rem);
+  margin-top: clamp(1.4rem, 1.4vw, 3.4rem);
+}
+
+.footerWaitlistLink:first-of-type {
+  background-color: var(--light-blue);
+}
+
+.footerWaitlistLink:last-of-type {
+  background-color: transparent;
+  border: 0.1rem solid #fff;
+}
+
+.copyrightContainer {
+  display: flex;
+  justify-content: space-between;
+  width: clamp(20rem, 86%, 110.2rem);
+  margin: 0 auto;
+  margin-top: clamp(0.6rem, 0.6vw, 1.6rem);
+  position: relative;
+  z-index: 1;
+}
+
+.copyrightText {
+  font-size: clamp(0.8rem, 1vw, 2.5rem);
+  font-weight: 400;
+  line-height: clamp(0.975rem, 0.975vw, 3.48rem);
+}
+
+.footerLineBreak {
+  margin-top: clamp(5.2rem, 5.2vw, 14.4rem);
+}
+
+.footerSocialLinks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+  margin-bottom: clamp(6.512rem, 6.512vw, 7rem);
+}
+
+.footerSocialLinkItem a img {
+  width: clamp(2.688rem, 2.688vw, 4.5rem);
+  height: clamp(2.688rem, 2.688vw, 4.5rem);
+}
+
+.footerSocialLinkItem:last-of-type a img {
+  width: clamp(1.4rem, 1.4vw, 3.5rem);
+  height: clamp(2.688rem, 2.688vw, 4.5rem);
+}
+
+@media (min-width: 768px) {
+  .footerWrapper {
+    gap: 18.5rem;
+    grid-template-columns: 1.3fr 0.7fr;
+  }
+
+  .footerSocialLinks {
+    gap: 1.2rem;
+  }
+}

@@ -1,0 +1,97 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  min-height: 28rem;
+  max-width: 60rem;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0.8rem;
+  box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.1);
+}
+
+.imageWrapper {
+  height: 20rem;
+  overflow: hidden;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  display: grid;
+  gap: 0.8rem;
+  padding: 1.5rem;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+  height: 3rem;
+}
+
+.type {
+  font-size: 1.4rem;
+  color: #888;
+}
+
+.details {
+  font-size: 1.4rem;
+  color: #555;
+}
+
+.location {
+  font-size: 1.4rem;
+  color: #555;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  list-style: none;
+  padding: 0;
+}
+
+.feature {
+  background-color: #f3f3f3;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 16px;
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+
+.bookButton,
+.detailsButton {
+  padding: 0.8rem;
+  font-size: 1.4rem;
+  border-radius: 0.3rem;
+  transition: background-color 0.3s ease;
+}
+
+.bookButton,
+.detailsButton {
+  background-color: #000;
+  color: #fff;
+}
+
+.bookButton:hover,
+.detailsButton:hover {
+  background-color: #0009;
+}
