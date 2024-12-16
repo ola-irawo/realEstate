@@ -1,5 +1,5 @@
 "use client";
-import React, { RefObject } from 'react';
+import React from 'react';
 import Image from "next/image";
 import styles from "./header.module.css";
 import Link from "next/link";

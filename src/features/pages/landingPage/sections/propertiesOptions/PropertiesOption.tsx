@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./properties-option.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 const PropertiesOption = () => {
   const options = [
@@ -33,10 +34,12 @@ const PropertiesOption = () => {
           {options.map((option, index) => (
             <div key={index} className={styles.card}>
               <div className={styles.cardImageWrapper}>
-                <img
-                src={option.image}
-                alt={option.title}
-                className={styles.cardImage}
+                <Image
+                  src={option.image}
+                  alt={option.title}
+                  width={10}
+                  height={10}
+                  className={styles.cardImage}
                 />
               </div>
 

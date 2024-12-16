@@ -1,5 +1,5 @@
 import { getFilteredPropertyType, getPropertyById } from "@/app/action";
-import { createApi, fakeBaseQuery, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
+import { createApi, fakeBaseQuery } from "@reduxjs/toolkit/query/react";
 
 const propertiesApi = createApi({
     reducerPath: "propertiesApi",

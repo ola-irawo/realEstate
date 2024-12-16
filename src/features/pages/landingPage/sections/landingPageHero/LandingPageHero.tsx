@@ -21,11 +21,11 @@ const LandingPageHero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 5000); // Change image every 5 seconds
+    }, 5000);
 
     console.log(currentImageIndex)
     return () => clearInterval(interval);
-  }, []);
+  }, [currentImageIndex]);
 
   return (
     <section className={styles.heroSection}>

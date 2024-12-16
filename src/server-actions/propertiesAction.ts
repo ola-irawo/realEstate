@@ -1,7 +1,7 @@
 "use server"
 
 import { db } from "@/config/firebase/firebase";
-import { collection, doc, getDoc, getDocs, query, where } from "firebase/firestore";
+import { collection, doc, getDoc, getDocs } from "firebase/firestore";
 import { NextResponse } from "next/server";
 
 export async function getPropertiesFromFirestore(propertyType: string) {

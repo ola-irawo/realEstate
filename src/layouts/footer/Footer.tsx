@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from "./footer.module.css"
 import Link from 'next/link'
-import linkedin from './components/svgs/linkedin.svg'
 
 const Footer = () => {
   return (

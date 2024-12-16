@@ -22,8 +22,8 @@ const AboutHero = () => {
           <p className={styles.sectionDescription}>
             Our dedicated team offers top-notch services for all your real estate needs. From buying to selling or renting, 
             we provide expert guidance and personalized solutions. Trust, integrity, and transparency are the foundation of 
-            our lasting relationships with valued clients like you. Whether you're a first-time homebuyer or an investor, 
-            we're here to support you every step of the way. Experience the difference with us!
+            our lasting relationships with valued clients like you. Whether you&apos;re a first-time homebuyer or an investor, 
+            we&apos;re here to support you every step of the way. Experience the difference with us!
           </p>
         </div>
 

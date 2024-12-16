@@ -28,7 +28,7 @@ const Testimonials = () => {
         <ul className={styles.testimonialList}>
           {testimonials.map((testimonial, index) => (
             <li key={index} className={styles.testimonialItem}>
-              <p className={styles.feedback}>"{testimonial.feedback}"</p>
+              <p className={styles.feedback}>&quot;{testimonial.feedback}&quot;</p>
               <h3 className={styles.name}>- {testimonial.name}</h3>
             </li>
           ))}

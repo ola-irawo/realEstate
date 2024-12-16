@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./property-card.module.css";
 import Link from "next/link";
 import BookInspection from "../modal/bookInspection/BookInspection";
+import Image from "next/image";
 
 interface PropertyProps {
   image: string;
@@ -11,7 +12,7 @@ interface PropertyProps {
   location: { city: string; state: string; country: string };
   price: number;
   type: string;
-  features: string[];
+  features?: string[];
   id: string
 }
 
@@ -23,7 +24,6 @@ const PropertyCard = ({
   location,
   price,
   type,
-  features,
   id
 }: PropertyProps) => {
   const [openBookInspection, setOpenBookInspection] = useState<boolean>(false)
@@ -40,7 +40,14 @@ const PropertyCard = ({
     )}
         
       <div className={styles.imageWrapper}>
-        <img src={image} alt={title} className={styles.image} />
+        <Image
+          src={image} 
+          alt={title}
+          width={10}
+          height={10}
+          className={styles.image}
+          priority
+        />
       </div>
 
       <div>

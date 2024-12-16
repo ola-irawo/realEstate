@@ -1,10 +1,7 @@
 "use client"
 import React, { useEffect, useState } from 'react'
 import styles from "./property-details-hero.module.css"
-import { useParams } from 'next/navigation';
-import { useGetPropertyByIdQuery } from '@/redux/features/propertiesApi/propertiesApi';
 import Image from 'next/image';
-
 interface PropertyProps {
   images: string[];
   title: string;

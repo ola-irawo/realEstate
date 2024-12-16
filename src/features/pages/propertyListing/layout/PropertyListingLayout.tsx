@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import PropertyListingHero from '../sections/propertyListingHero/PropertyListingHero'
 import PropertyListing from '../sections/propertyListing/PropertyListing'
 import { useFilteredPropertyQuery } from '@/redux/features/propertiesApi/propertiesApi'
@@ -28,9 +28,7 @@ const PropertyListingLayout = () => {
 
     const {
       data: properties = [],
-      isError,
       isLoading,
-      isFetching
     } = useFilteredPropertyQuery({propertyFilters, propertyType: propertyFilters.type})
 
     if(isLoading){
