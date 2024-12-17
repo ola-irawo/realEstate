@@ -52,9 +52,7 @@ import React from 'react'
 // }
 
 const page = () => {
-  if(true){
-    return "Yes"
-  }
+
   return (
     <main>
         <PropertyDetailsLayout />
