@@ -2,6 +2,9 @@ import PropertyListingLayout from "@/features/pages/propertyListing/layout/Prope
 import React from "react";
 
 const page = () => {
+  if(true){
+    return "yes"
+  }
   return (
     <div>
       <PropertyListingLayout />
