@@ -1,18 +1,25 @@
-"use client"
-import  { useEffect, useState } from 'react'
+"use client";
+import { useEffect, useState } from "react";
 
 const useWindowWidth = () => {
-    const [windowhWidth, setWindowWidth] = useState<number>(window.innerWidth)
+    // Initialize with `undefined` or a safe default value
+    const [windowWidth, setWindowWidth] = useState<number | undefined>(
+        typeof window !== "undefined" ? window.innerWidth : undefined
+    );
 
     useEffect(() => {
-        const handleResize  = () => {
-            setWindowWidth(window.innerWidth)
-        }
+        // Ensure this code only runs in the browser
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
 
-        window.addEventListener("resize", handleResize)
-        return () => window.removeEventListener("resize", handleResize)
-    }, [windowhWidth])
-  return windowhWidth
-}
+        handleResize(); // Set initial width on mount
+        window.addEventListener("resize", handleResize);
 
-export default useWindowWidth
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    return windowWidth;
+};
+
+export default useWindowWidth;
