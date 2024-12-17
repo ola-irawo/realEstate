@@ -1,7 +1,7 @@
 import PropertyDetailsLayout from '@/features/pages/propertyDetails/layout/PropertyDetailsLayout'
 import React from 'react'
-import { GetStaticProps } from 'next';
-import { useFilteredPropertyQuery, useGetPropertyByIdQuery } from '@/redux/features/propertiesApi/propertiesApi';
+// import { GetStaticProps } from 'next';
+// import { useFilteredPropertyQuery, useGetPropertyByIdQuery } from '@/redux/features/propertiesApi/propertiesApi';
 
 
 // export const generateStaticParams = async () => {
