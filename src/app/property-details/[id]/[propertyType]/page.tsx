@@ -1,4 +1,5 @@
 import PropertyDetailsLayout from '@/features/pages/propertyDetails/layout/PropertyDetailsLayout'
+// import { useFilteredPropertyQuery } from '@/redux/features/propertiesApi/propertiesApi'
 import React from 'react'
 // import { GetStaticProps } from 'next';
 // import { useFilteredPropertyQuery, useGetPropertyByIdQuery } from '@/redux/features/propertiesApi/propertiesApi';
@@ -46,6 +47,9 @@ import React from 'react'
 //   }));
 // }
 
+// export const generateStaticParams = () => {
+//   const property = useFilteredPropertyQuery({})
+// }
 
 const page = () => {
   if(true){
