@@ -51,8 +51,9 @@ import React from 'react'
 //   const property = useFilteredPropertyQuery({})
 // }
 
-const page = () => {
+const page = ({params}) => {
 
+  console.log({params}, params.id, params.propertyType)
   return (
     <main>
         <PropertyDetailsLayout />
