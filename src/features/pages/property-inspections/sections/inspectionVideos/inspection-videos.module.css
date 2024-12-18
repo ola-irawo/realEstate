@@ -1,0 +1,51 @@
+.inspectionSection {
+  padding: 2rem 1rem;
+  background-color: #f8f9fa; /* Light gray background */
+  text-align: center;
+}
+
+.sectionHeading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #343a40; /* Dark gray text */
+}
+
+.sectionDescription {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #6c757d; /* Muted text */
+}
+
+.videoGrid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  justify-content: center;
+}
+
+.videoCard {
+  background: #fff; /* White card background */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.videoCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Elevate on hover */
+}
+
+.videoFrame {
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Maintain responsive 16:9 aspect ratio */
+}
+
+.videoTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  color: #495057; /* Darker text for contrast */
+  padding: 0 1rem;
+}
