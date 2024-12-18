@@ -19,7 +19,9 @@ interface PropertiesFilterProps {
 const PropertiesFilter = ({ propertyFilters, handleFilterChange }: PropertiesFilterProps) => {
   return (
     <section className={styles.filterSection}>
+      
       <h2 className={styles.title}>Filter Properties</h2>
+
       <div className={styles.form}>
         <label>
           <select

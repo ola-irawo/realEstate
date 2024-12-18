@@ -1,5 +1,5 @@
 .filterSection {
-  padding: 2rem;
+  padding: clamp(1rem, 3vw, 3rem);
   background: #f8f8f8;
   border-radius: 0.8rem;
   max-width: 80rem;
@@ -17,9 +17,6 @@
 }
 
 .form {
-  /* display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
-  gap: 1rem;
   display: flex;
   flex-wrap: wrap;
 }
@@ -37,21 +34,13 @@
 .form label {
   flex: 1;
   min-width: 20rem;
+  margin: 0.5rem;
 }
 
 /* Media Queries */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .filterSection {
     padding: 1rem;
-  }
-
-  .title {
-    font-size: 1.5rem;
-  }
-
-  .form {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
   }
 }
 
@@ -59,8 +48,4 @@
   .filterSection {
     padding: 3rem;
   }
-
-  .title {
-    font-size: 2rem;
-  }
-}
+} */

@@ -37,11 +37,14 @@ const BookInspection: React.FC<BookInspectionProps> = ({ propertyLink, setOpenBo
   return (
     <aside className={styles.modal}>
       <div className={styles.modalContent}>
+        
         <button className={styles.closeButton} onClick={() => setOpenBookInspection(false)}>
           &times;
         </button>
+
         <h2>Book Inspection</h2>
-        <p>Property Link: <a href={propertyLink} target="_blank" rel="noopener noreferrer">{propertyLink}</a></p>
+        <p className={styles.propertyLink}>Property Link: <a href={propertyLink} target="_blank" rel="noopener noreferrer">{propertyLink}</a></p>
+       
         <form onSubmit={handleSubmit} className={styles.form}>
           <label>
             Date:
@@ -64,7 +67,7 @@ const BookInspection: React.FC<BookInspectionProps> = ({ propertyLink, setOpenBo
           <label>
             Message: (You can edit the message below)
             <textarea
-              rows={4}
+              rows={10}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
               placeholder="Add any additional information..."

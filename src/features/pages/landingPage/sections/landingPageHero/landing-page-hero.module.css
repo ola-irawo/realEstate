@@ -46,7 +46,6 @@
 
 .heroLinkContainer {
   display: flex;
-  gap: 1.5rem;
   margin-top: 2rem;
 }
 
@@ -67,8 +66,12 @@
   background-color: #e64a19;
 }
 
+.linkButton:last-of-type {
+  margin-left: clamp(1.5rem, 3vw, 2rem);
+}
+
 .offsetButtons {
-  width: 3rem;
+  width: 4rem;
   display: flex;
   justify-content: space-between;
   position: absolute;

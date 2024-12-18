@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40rem;
+  height: 42rem;
   background-image: url("https://img.freepik.com/free-photo/selective-focus-design-architecture_273609-5607.jpg?uid=R174724058&ga=GA1.1.1991276647.1688005309&semt=ais_hybrid");
   background-size: cover;
   background-position: center;
@@ -19,6 +19,7 @@
   background: rgba(0, 0, 0, 0.5);
   padding: 3rem;
   border-radius: 0.8rem;
+  padding: clamp(1.5rem, 3vw, 2rem);
 }
 
 .title {
@@ -28,11 +29,4 @@
   letter-spacing: -0.02em;
   margin-bottom: 2rem;
   color: #fff;
-}
-
-/* Make it responsive */
-@media (max-width: 768px) {
-  .heroContent {
-    padding: 1.5rem;
-  }
 }

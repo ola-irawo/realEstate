@@ -31,6 +31,7 @@ const LandingPageHero = () => {
       <article className={styles.container}>
 
         <div
+          aria-hidden="true"
           className={styles.imageBackground}
           style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
         ></div>
@@ -50,6 +51,7 @@ const LandingPageHero = () => {
               width={windowWidth > 1000 ? 500 : 400}
               height={windowWidth > 1000 ? 400 : 300}
               className={styles.realtor}
+              aria-hidden="true"
             />
           }
           
@@ -63,6 +65,7 @@ const LandingPageHero = () => {
       <aside className={styles.offsetButtons}>
         {images.map((_, index) => (
           <button
+            aria-hidden="true"
             key={index}
             className={`${styles.heroButton} ${
               currentImageIndex === index ? styles.activeButton : ""
