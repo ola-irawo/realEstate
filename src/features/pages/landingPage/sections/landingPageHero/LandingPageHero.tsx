@@ -23,7 +23,6 @@ const LandingPageHero = () => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 5000);
 
-    console.log(currentImageIndex)
     return () => clearInterval(interval);
   }, [currentImageIndex]);
 

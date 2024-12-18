@@ -37,8 +37,8 @@ const PropertiesOption = () => {
                 <Image
                   src={option.image}
                   alt={option.title}
-                  width={10}
-                  height={10}
+                  width={150}
+                  height={100}
                   className={styles.cardImage}
                 />
               </div>

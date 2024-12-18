@@ -34,19 +34,23 @@ export const getFilteredPropertyType = async ({
         const querySnapshot = await getDocs(collection(db, propertyType));
         const properties = querySnapshot.docs.map(doc => ({
             id: doc.id,
-            ...doc.data()
+            ...doc.data(),
+            
         }));
 
         return properties
       }
 
-        const queryConstraints = [];
+        const queryConstraints: Array<{ id: string; [key: string]: any }> = [];
         
         const filteredKeys = Object.keys(filterItem || {}).filter(
           (key) => filterItem[key] !== undefined && filterItem[key] !== ""
         );
 
-        const filterHandlers = {
+        const filterHandlers: Record<
+        "price" | "bedrooms" | "bathrooms" | "location",
+        (value: string) => Promise<any>
+          > = {
           price: async (value: string) => {
             const [min, max] = value.split("-").map(Number);
             return query(
@@ -66,8 +70,15 @@ export const getFilteredPropertyType = async ({
         };
 
         for (const key of filteredKeys) {
-          const value = filterItem[key];
-          const handler = filterHandlers[key];
+          // const value = filterItem[key];
+          let value = filterItem[key];
+
+          // Ensure value is a string before passing it to handler
+          if (typeof value === "number") {
+            value = value.toString(); // Convert number to string
+          }
+        
+          const handler = filterHandlers[key as keyof typeof filterHandlers];
         
           if (handler) {
             const propertiesQuery = await handler(value);
@@ -76,7 +87,9 @@ export const getFilteredPropertyType = async ({
             querySnapshot.docs.forEach((doc) => {
               const data = doc.data(); // Fetch the document data
               if (typeof data === "object" && data !== null) { // Ensure data is an object
-                queryConstraints.push({ id: doc.id, ...data });
+                queryConstraints.push({ 
+                  id: doc.id,
+                   ...data });
               } else {
                 console.warn(`Invalid document data for doc ID ${doc.id}:`, data);
               }
@@ -84,6 +97,7 @@ export const getFilteredPropertyType = async ({
           }
         }
         
+        console.log(queryConstraints)
         const uniqueConstraints = Array.from(
           new Map(queryConstraints.map((item) => [item.id, item])).values()
         );

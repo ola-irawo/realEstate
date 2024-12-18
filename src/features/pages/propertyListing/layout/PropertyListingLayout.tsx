@@ -34,6 +34,8 @@ const PropertyListingLayout = () => {
     if(isLoading){
       return <Loader />
     }
+
+    console.log(properties)
     
   return (
     <>

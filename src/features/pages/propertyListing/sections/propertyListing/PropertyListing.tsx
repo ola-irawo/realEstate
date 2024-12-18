@@ -12,11 +12,12 @@ interface Property {
     price: number;
     type: string;
     features: string[];
+    // description: string;
   }
   
   // Define the props for the PropertyListing component
   interface PropertyListingProps {
-    properties: Property[];
+    properties: any;
     type: string
   }
 
@@ -27,20 +28,20 @@ const PropertyListing = ({properties, type}: PropertyListingProps) => {
       <h2 className={styles.propertyListingTitle}>For {type}</h2>
 
       <ul className={styles.propertyList}>
-        {properties.map((property, index) => {
-            return <li key={index} className={styles.propertyItem}>
-                <PropertyCard
-                    image={property.images[0]}
-                    title={property.title}
-                    bathrooms={property.bathrooms}
-                    bedrooms={property.bedrooms}
-                    location={property.location}
-                    price={property.price}
-                    type={property.type}
-                    features={property.features}
-                    id={property.id}
-                />
-           </li>
+        {properties.map((property: any, index: number) => {
+          return <li key={index} className={styles.propertyItem}>
+            <PropertyCard
+              image={property.images[0]}
+              title={property.title}
+              bathrooms={property.bathrooms}
+              bedrooms={property.bedrooms}
+              location={property.location}
+              price={property.price}
+              type={property.type}
+              features={property.features}
+              id={property.id}
+            />
+          </li>
         })}
       </ul>
     </section>

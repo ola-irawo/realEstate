@@ -43,8 +43,8 @@ const PropertyCard = ({
         <Image
           src={image} 
           alt={title}
-          width={10}
-          height={10}
+          width={280}
+          height={200}
           className={styles.image}
           priority
         />
