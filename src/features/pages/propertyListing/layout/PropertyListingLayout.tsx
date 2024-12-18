@@ -3,11 +3,11 @@ import React, { useState } from 'react'
 import PropertyListingHero from '../sections/propertyListingHero/PropertyListingHero'
 import PropertyListing from '../sections/propertyListing/PropertyListing'
 import { useFilteredPropertyQuery } from '@/redux/features/propertiesApi/propertiesApi'
-import { useSearchParams } from 'next/navigation'
+// import { useSearchParams } from 'next/navigation'
 import Loader from '@/component/loader/Loader'
 
 const PropertyListingLayout = () => {
-    const searchParams = useSearchParams()
+    // const searchParams = useSearchParams()
     // const propertyType = searchParams.get("propertyType")
     const propertyType = "sale"
 
