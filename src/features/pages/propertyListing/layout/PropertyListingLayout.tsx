@@ -8,7 +8,8 @@ import Loader from '@/component/loader/Loader'
 
 const PropertyListingLayout = () => {
     const searchParams = useSearchParams()
-    const propertyType = searchParams.get("propertyType")
+    // const propertyType = searchParams.get("propertyType")
+    const propertyType = "sale"
 
     const [propertyFilters, setPropertyFilters] = useState({
         type: propertyType ? propertyType : "sale",
