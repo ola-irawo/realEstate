@@ -20,7 +20,7 @@ const Footer = () => {
               </Link>
             </li>
             <li className={styles.footerNavItem}>
-              <Link href="/listing">
+              <Link href="/property-listing">
                 Propertie Listing
               </Link>
             </li>
