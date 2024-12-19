@@ -85,7 +85,7 @@
 .bookInspectionButton {
   background-color: transparent;
   color: #000;
-  outline: 0.1rem solid #000;
+  border: 0.1rem solid #000;
   margin-left: clamp(1rem, 2vw, 2rem);
 }
 
