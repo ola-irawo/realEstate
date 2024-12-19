@@ -92,11 +92,11 @@
   margin-top: clamp(1.4rem, 1.4vw, 3.4rem);
 }
 
-.footerWaitlistLink:first-of-type {
+/* .footerWaitlistLink:first-of-type {
   background-color: var(--light-blue);
-}
+} */
 
-.footerWaitlistLink:last-of-type {
+.footerWaitlistLink {
   background-color: transparent;
   border: 0.1rem solid #fff;
 }

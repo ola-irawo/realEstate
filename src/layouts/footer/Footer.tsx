@@ -54,10 +54,12 @@ const Footer = () => {
           </p>
 
           <div className={styles.footerWaitlistLinkContainer}>
-            <Link href="#">
+            <Link href="/property-listing" className={styles.footerWaitlistLink}>
               View Listing
             </Link>
-            <Link href="https://chat.whatsapp.com/BX7J6GVTxrhECuJOuqAxOT" target="_blank">
+            <Link 
+              className={styles.footerWaitlistLink}
+              href="https://chat.whatsapp.com/BX7J6GVTxrhECuJOuqAxOT" target="_blank">
               Contact
             </Link>
           </div>
