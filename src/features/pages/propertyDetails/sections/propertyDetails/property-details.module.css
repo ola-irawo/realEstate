@@ -31,7 +31,7 @@
   background-color: #3333;
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
+  padding: 1rem 2rem;
   font-size: clamp(1.6rem, 1.6vw, 2.2rem);
   font-weight: clamp(400, 400, 500);
   line-height: clamp(2.4rem, 2.4vw, 3rem);
@@ -44,7 +44,7 @@
   background-color: #3333;
   border-radius: 0.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
+  padding: 1rem 2rem;
   font-size: clamp(1.6rem, 1.6vw, 2.2rem);
   font-weight: clamp(400, 400, 500);
   line-height: clamp(2.4rem, 2.4vw, 3rem);
@@ -62,4 +62,35 @@
 
 .features li {
   margin-bottom: 5px;
+}
+
+.actionsContainer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  justify-content: center;
+}
+
+.contactAgentButton,
+.bookInspectionButton {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #000;
+  color: #fff;
+  transition: background-color, color, 0.3s ease;
+}
+
+.bookInspectionButton {
+  background-color: transparent;
+  color: #000;
+  outline: 0.1rem solid #000;
+}
+
+.bookInspectionButton:hover {
+  background-color: #000;
+  color: #fff;
 }
