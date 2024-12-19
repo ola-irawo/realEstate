@@ -28,7 +28,7 @@
   width: calc(50% - 1rem);
   min-width: 90%;
   max-width: 48rem;
-  height: clamp(20rem, 20vw, 30rem);
+  height: clamp(20rem, 26vw, 30rem);
   background-size: cover;
   background-position: center;
   border-radius: 8px;
@@ -83,6 +83,12 @@
 }
 
 @media (min-width: 768px) {
+  .serviceItem {
+    min-width: 80%;
+  }
+}
+
+@media (min-width: 1057px) {
   .serviceItem {
     min-width: unset;
   }
