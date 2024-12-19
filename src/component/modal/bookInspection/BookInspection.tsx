@@ -51,7 +51,19 @@ const BookInspection: React.FC<BookInspectionProps> = ({ propertyLink, setOpenBo
             <input
               type="date"
               value={date}
-              onChange={(e) => setDate(e.target.value)}
+              onChange={(e) => {
+                setDate(e.target.value)
+                setMessage(
+                  `Hello, I am interested in scheduling an inspection for the property, "${title}". 
+                  Here are the details:
+                  - Property Link: ${propertyLink}
+                  - Preferred Date: ${e.target.value}
+                  - Preferred Time: ${time}
+                  - Preferred Tyoe: For ${type}
+                  `
+                )
+              }
+              }
               required
             />
           </label>
@@ -60,7 +72,18 @@ const BookInspection: React.FC<BookInspectionProps> = ({ propertyLink, setOpenBo
             <input
               type="time"
               value={time}
-              onChange={(e) => setTime(e.target.value)}
+              onChange={(e) => {
+                setTime(e.target.value)
+                setMessage(
+                  `Hello, I am interested in scheduling an inspection for the property, "${title}". 
+                  Here are the details:
+                  - Property Link: ${propertyLink}
+                  - Preferred Date: ${date}
+                  - Preferred Time: ${e.target.value}
+                  - Preferred Tyoe: For ${type}
+                  `
+                )
+              }}
               required
             />
           </label>
