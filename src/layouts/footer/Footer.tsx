@@ -69,7 +69,7 @@ const Footer = () => {
       <hr className={styles.footerLineBreak} />
 
       <div className={styles.copyrightContainer}>
-        <p className={styles.copyrightText}>Copyright 2024, Ventmoir. All rights reserved</p>
+        <p className={styles.copyrightText}>Copyright 2024, Aremudami_luxury. All rights reserved</p>
 
         <ul className={styles.footerSocialLinks}>
           <li className={styles.footerSocialLinkItem}>
