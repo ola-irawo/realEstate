@@ -56,8 +56,8 @@ const LandingPageHero = () => {
           }
           
           <div className={styles.heroLinkContainer}>
-            <Link href="listing"  className={styles.linkButton}>View listing</Link>
-            <Link href="contact" className={styles.linkButton}>Contact</Link>
+            <Link href="property-listing"  className={styles.linkButton}>View listing</Link>
+            <a href="tel:+2348156959983" className={styles.linkButton}>Contact</a>
           </div>
       </div>
       </article>
