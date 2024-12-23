@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: `/favicon.ico`,
+        url: `https://realestate-qx5l.onrender.com/favicon.ico`,
         width: 1200,
         height: 630,
         alt: "A preview of properties available for sale, rent, and shortlet",
