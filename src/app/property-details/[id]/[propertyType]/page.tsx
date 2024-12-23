@@ -33,7 +33,6 @@ export const generateMetadata = async ({params}: {params: {id: string, propertyT
   }
 }
 
-
 const page =  () => {
   return (
     <main>

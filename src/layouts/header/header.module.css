@@ -16,6 +16,11 @@
   align-items: center;
 }
 
+.brandLogo {
+  width: clamp(12rem, 12vw, 18rem);
+  height: clamp(6rem, 6vw, 8rem);
+}
+
 .navContainer {
   min-width: 28rem;
   height: 33rem;
@@ -59,11 +64,19 @@
   border: 0.1rem solid #000;
 }
 
+.showElement {
+  display: block;
+}
+
 @media (min-width: 1000px) {
   .header {
     display: flex;
     align-items: center;
     height: 10.6rem;
+  }
+
+  .showElement {
+    display: none;
   }
 
   .logoContainer {
