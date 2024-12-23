@@ -62,10 +62,9 @@ const LandingPageHero = () => {
       </div>
       </article>
 
-      <aside className={styles.offsetButtons}>
+      <aside className={styles.offsetButtons} aria-hidden="true">
         {images.map((_, index) => (
           <button
-            aria-hidden="true"
             key={index}
             className={`${styles.heroButton} ${
               currentImageIndex === index ? styles.activeButton : ""
