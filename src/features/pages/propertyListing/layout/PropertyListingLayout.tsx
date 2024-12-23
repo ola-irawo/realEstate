@@ -32,9 +32,9 @@ const PropertyListingLayout = () => {
       isLoading,
     } = useFilteredPropertyQuery({propertyFilters, propertyType: propertyFilters.type})
 
-    if(isLoading){
-      return <Loader />
-    }
+    // if(isLoading){
+    //   return <Loader />
+    // }
     
   return (
     <>
