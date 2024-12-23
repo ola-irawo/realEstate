@@ -16,8 +16,32 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Aremudami_luxury",
-  description: "Real estate",
+  title: {
+    default: "Aremudami_luxury real estate",
+    template: "%s | Aremudami_luxury real estate",
+  },
+  description: "Discover a wide range of properties, from cozy apartments to luxurious homes, available for sale, rent, or shortlet.",
+  keywords: ["real estate", "property listing", "homes for sale", "houses for rent", "shortlet apartments", "investment properties"],
+  robots: "index, follow",
+  openGraph: {
+    title: "Explore Properties for Sale, Rent, and Shortlet",
+    description: "Discover a wide range of properties, from cozy apartments to luxurious homes, available for sale, rent, or shortlet.",
+    url: `https://www.aremudami_luxury.com`,
+    type: "website",
+    images: [
+      {
+        url: `/favicon.ico`,
+        width: 1200,
+        height: 630,
+        alt: "A preview of properties available for sale, rent, and shortlet",
+      },
+    ],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/manifest.json",
 };
 
 export default function RootLayout({
