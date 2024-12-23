@@ -4,7 +4,7 @@ import PropertyListingHero from '../sections/propertyListingHero/PropertyListing
 import PropertyListing from '../sections/propertyListing/PropertyListing'
 import { useFilteredPropertyQuery } from '@/redux/features/propertiesApi/propertiesApi'
 // import { useSearchParams } from 'next/navigation'
-import Loader from '@/component/loader/Loader'
+// import Loader from '@/component/loader/Loader'
 
 const PropertyListingLayout = () => {
     // const searchParams = useSearchParams()
