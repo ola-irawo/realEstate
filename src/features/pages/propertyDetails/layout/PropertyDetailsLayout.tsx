@@ -28,8 +28,14 @@ const PropertyDetailsLayout = () => {
 
   const {
     data: property,
-    isLoading
+    isLoading,
+    isError,
+    error
   } = useGetPropertyByIdQuery({id, propertyType})
+
+  if(isError){
+    throw error
+  }
 
   if(isLoading){
     return <Loader />

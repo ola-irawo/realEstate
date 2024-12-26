@@ -7,15 +7,21 @@ interface Props {
     propertyType: string
 }
 
-export const getPropertyById = async ({id, propertyType}: Props) => {
+
+export const getPropertyById = async ({ id, propertyType }: Props) => {
+  try {
     const docRef = doc(db, propertyType, id);
     const docSnap = await getDoc(docRef);
+
     if (docSnap.exists()) {
-        return { data: docSnap.data() };
+      return { data: docSnap.data() };
     } else {
-        throw new Error("Property not found");
+      throw new Error("Property does not exist");
     }
-}
+  } catch (error) {
+    return { error: error || "Failed to fetch property" };
+  }
+};
 
 export const getFilteredPropertyType = async ({
     filterItem,

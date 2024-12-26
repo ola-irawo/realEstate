@@ -4,7 +4,6 @@ import PropertyListingHero from '../sections/propertyListingHero/PropertyListing
 import PropertyListing from '../sections/propertyListing/PropertyListing'
 import { useFilteredPropertyQuery } from '@/redux/features/propertiesApi/propertiesApi'
 // import { useSearchParams } from 'next/navigation'
-// import Loader from '@/component/loader/Loader'
 
 const PropertyListingLayout = () => {
     // const searchParams = useSearchParams()
@@ -29,12 +28,13 @@ const PropertyListingLayout = () => {
 
     const {
       data: properties = [],
-      isLoading,
+      isError,
+      error
     } = useFilteredPropertyQuery({propertyFilters, propertyType: propertyFilters.type})
 
-    // if(isLoading){
-    //   return <Loader />
-    // }
+    if(isError){
+      throw error
+    }
     
   return (
     <>

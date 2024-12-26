@@ -8,9 +8,14 @@ const propertiesApi = createApi({
 
         getPropertyById: builder.query({
             queryFn: async ({id, propertyType}) => {
-                const property = await getPropertyById({id, propertyType})
-                console.log(property)
-                return property
+                try{
+                    const property = await getPropertyById({id, propertyType})
+                    console.log(property)
+                    return property
+                }
+                catch(error){
+                    return error
+                }
             }
         }),
         filteredProperty: builder.query({
@@ -22,7 +27,7 @@ const propertiesApi = createApi({
                   } 
                 catch (error: unknown) {
                 if (error instanceof Error) {
-                    return { error: error.message };  
+                    return { error: error };  
                 }
                     return { error: "An unknown error occurred" };
                 }
