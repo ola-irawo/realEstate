@@ -17,15 +17,15 @@ export function middleware(request: NextRequest) {
   }
 
   // Example: Redirect unauthorized users
-  const token = false;
-  const response  = NextResponse.next()
-  console.log({response})
-  if (!token && request.nextUrl.pathname === ('/')) {
-    return NextResponse.redirect(new URL('/about-us', request.url));
-  }
+  // const token = false;
+  // const response  = NextResponse.next()
+  // console.log({response})
+  // if (!token && request.nextUrl.pathname === ('/')) {
+  //   return NextResponse.redirect(new URL('/about-us', request.url));
+  // }
 
-  // Continue to the requested page
-  return NextResponse.next();
+  // // Continue to the requested page
+  // return NextResponse.next();
 }
 
 export const config = {
