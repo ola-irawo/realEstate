@@ -30,11 +30,22 @@ const LandingPageHero = () => {
     <section className={styles.heroSection}>
       <article className={styles.container}>
 
-        <div
+        <Image
+          src={`${images[currentImageIndex]}`}
+          alt="Background overlay image"
+          aria-hidden="true"
+          width={200}
+          height={440}
+          className={styles.imageBackground}
+          // blurDataURL="https://img.freepik.com/free-photo/3d-electric-car-building_23-2148972401.jpg?uid=R174724058&ga=GA1.1.1991276647.1688005309&semt=ais_hybrid"
+          priority
+        />
+
+        {/* <div
           aria-hidden="true"
           className={styles.imageBackground}
           style={{ backgroundImage: `url(${images[currentImageIndex]})` }}
-        ></div>
+        ></div> */}
 
         <div className={styles.contentWrapper}>
           <header className={styles.header}>
